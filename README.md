@@ -1,2 +1,3 @@
 # raylib-test
  
+WROTE A STARTING POINT TO TEST RAYLIB
