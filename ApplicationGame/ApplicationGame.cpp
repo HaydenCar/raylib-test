@@ -1,22 +1,16 @@
 #include <raylib.h>
-#include "PlayerInfo.h"
-#include <iostream>
+#include "Engine.h"
 
 int main()
 {
-    player PLAYER;
     InitWindow(1280, 720, "Title");
     SetTargetFPS(60);
+    
+    DisableCursor(); 
 
     while (WindowShouldClose() == false)
     {
-        handleInput(&PLAYER);
-
-        BeginDrawing();
-        ClearBackground(BLANK);
-        DrawCircle(PLAYER.x, PLAYER.y, PLAYER.radius, WHITE);
-
-        EndDrawing();
+        engineRun();
     }
 
     CloseWindow();

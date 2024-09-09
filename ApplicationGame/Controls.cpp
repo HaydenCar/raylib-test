@@ -3,15 +3,19 @@
 
 void handleInput(player* PLAYER) {
     if (IsKeyDown(KEY_LEFT_SHIFT)){
-        PLAYER->wishSpeed = PLAYER->sprintSpeed;
+        PLAYER->wishSpeed = PLAYER->getSprintSpeed();
     }
-    else PLAYER->wishSpeed = PLAYER->walkSpeed;
+    else PLAYER->wishSpeed = PLAYER->getWalkSpeed();
 
-    if (IsKeyDown(KEY_LEFT)){
+    if (PLAYER->x - PLAYER->wishSpeed < 20) {
+
+    }else if (IsKeyDown(KEY_LEFT)){
         PLAYER->x -= PLAYER->wishSpeed;
     }
 
-    if (IsKeyDown(KEY_RIGHT)){
+    if (PLAYER->x + PLAYER->wishSpeed > 1260) {
+
+    }else if (IsKeyDown(KEY_RIGHT)){
         PLAYER->x += PLAYER->wishSpeed;
     }
     
@@ -26,6 +30,4 @@ void handleInput(player* PLAYER) {
     } else if(IsKeyDown(KEY_UP)){
         PLAYER->y -= PLAYER->wishSpeed;
     }
-    
-    
 }

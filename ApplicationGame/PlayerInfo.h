@@ -2,14 +2,25 @@
 
 class player {
 private:
-	
-public:
 	float radius = 20.f;
-	int x = 400;
-	int y = 700;
 	const int walkSpeed = 3;
 	const int sprintSpeed = 8;
+public:
+	float getRadius() {
+		return radius;
+	}
+	int getWalkSpeed() {
+		return walkSpeed;
+	}
+	int getSprintSpeed() {
+		return sprintSpeed;
+	}
+
 	int wishSpeed = 3;
+
+	int x = 400;
+	int y = 700;
+	
 	float airTime = 0;
 };
 
